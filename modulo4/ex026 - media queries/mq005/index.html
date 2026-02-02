@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
     <header>
-        <h1>Meu Site</h1>
-        <menu>
+        <h1>Bloodborne</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">
             <ul>
                 <li><a href="#">Visão Geral</a></li>
                 <li><a href="#">Funcionalidades</a></li>
@@ -31,5 +33,14 @@
             <p>A narrativa do jogo é construída de maneira sutil, espalhada em descrições de itens, diálogos curtos e detalhes do cenário. Os chefes representam momentos marcantes, exigindo paciência e adaptação, enquanto a trilha sonora reforça a tensão e a grandiosidade das batalhas mais importantes. Mais do que um jogo conhecido pela dificuldade, Bloodborne se destaca por sua direção artística, atmosfera envolvente e pela sensação constante de descoberta em um mundo cuidadosamente construído.</p>
         </article>
     </main>
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>
