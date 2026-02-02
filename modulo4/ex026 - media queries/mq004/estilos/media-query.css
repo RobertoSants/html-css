@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias (desatualizado - 07/2020) */
+
+/* Typical Device Breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+
+/* Typical Responsive Breakpoints (Mobile-First)
+---------------------------------------------------------
+Extra-small (smartphones pequenos): até 360px
+Small (smartphones maiores / landscape): 361px até 576px
+Medium (tablets portrait): 577px até 768px
+Large (tablets landscape / laptops): 769px até 992px
+Extra-large (desktops padrão): 993px até 1200px
+XX-large (monitores grandes / 4K): acima de 1200px
+
+Padrão moderno: usar @media (min-width) e deixar o CSS base para mobile.
+*/
+
+ @media print { /* IMPRESSÃO */
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg); /* desnecessário */
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita através do site www.cursoemvideo.com';
+        text-decoration: overline;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone { display: none;}
+    img#tablet { display: none;}
+    img#print { display: block;}
+    img#pc { display: none;}
+    img#tv { display: none;}
+
+ }
+
+ @media screen and (min-width: 768px) and (max-width: 992px) { /* TABLET */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone { display: none;}
+    img#tablet { display: block;}
+    img#print { display: none;}
+    img#pc { display: none;}
+    img#tv { display: none;}
+ }
+
+ @media screen and (min-width: 992px) and (max-width:1200px) { /* DESKTOP */
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone { display: none;}
+    img#tablet { display: none;}
+    img#print { display: none;}
+    img#pc { display: block;}
+    img#tv { display: none;}
+ }
+
+ @media screen and (min-width: 1200px) { /* GRANDES TELAS */
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 700px;
+    }
+
+    img#phone { display: none;}
+    img#tablet { display: none;}
+    img#print { display: none;}
+    img#pc { display: none;}
+    img#tv { display: block;}
+ }
